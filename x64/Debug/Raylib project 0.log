@@ -5,60 +5,59 @@ D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(60,15):
 D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(74,10): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
 D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(194,84): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
 D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(198,14): warning C4305: =: усечение из "double" в "float"
-D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(263,84): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
-D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(263,78): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
-D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(263,33): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
-D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(265,90): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
-D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(265,78): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
-D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(265,33): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
-D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(273,89): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
-D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(273,83): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
-D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(273,33): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
-D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(275,95): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
-D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(275,83): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
-D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(275,33): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
-D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(490,43): warning C4244: =: преобразование "double" в "float", возможна потеря данных
-D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(495,43): warning C4244: =: преобразование "double" в "float", возможна потеря данных
-D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(505,22): warning C4244: инициализация: преобразование "float" в "int", возможна потеря данных
-D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(519,80): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
-D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(519,72): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
-D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(519,54): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
-D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(519,29): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
-D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(579,16): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
-D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(667,26): warning C4305: инициализация: усечение из "double" в "float"
-D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(668,34): warning C4838: Преобразование из "int" в "float" требует сужающего преобразования.
-D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(668,34): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
-D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(668,71): warning C4838: Преобразование из "int" в "float" требует сужающего преобразования.
-D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(668,71): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
-D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(690,21): warning C4018: <: несоответствие типов со знаком и без знака
-D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(738,11): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
-D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(799,24): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
-D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(799,17): warning C4244: инициализация: преобразование "double" в "const float", возможна потеря данных
-D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(832,24): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
-D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(832,17): warning C4244: инициализация: преобразование "double" в "const float", возможна потеря данных
-D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(852,34): warning C4305: +=: усечение из "double" в "float"
-D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(855,17): warning C4305: *=: усечение из "double" в "float"
-D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(856,17): warning C4305: *=: усечение из "double" в "float"
-D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(902,24): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
-D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(902,17): warning C4244: инициализация: преобразование "double" в "const float", возможна потеря данных
-D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(934,24): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
-D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(934,17): warning C4244: инициализация: преобразование "double" в "const float", возможна потеря данных
-D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(969,34): warning C4305: +=: усечение из "double" в "float"
-D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(971,39): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
-D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(972,41): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
-D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(975,17): warning C4305: *=: усечение из "double" в "float"
-D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(976,17): warning C4305: *=: усечение из "double" в "float"
-D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(1018,28): warning C4244: =: преобразование "float" в "int", возможна потеря данных
-D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(1019,29): warning C4244: =: преобразование "float" в "int", возможна потеря данных
-D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(1024,34): warning C4244: =: преобразование "float" в "int", возможна потеря данных
-D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(1025,35): warning C4244: =: преобразование "float" в "int", возможна потеря данных
-D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(1030,39): warning C4244: =: преобразование "float" в "int", возможна потеря данных
-D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(1031,40): warning C4244: =: преобразование "float" в "int", возможна потеря данных
-D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(1062,11): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
-D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(1063,11): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
-D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(1128,33): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
-D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(1128,25): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
-D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(1171,12): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
-D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(1185,22): warning C4018: <: несоответствие типов со знаком и без знака
-D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(414,1): warning C4715: BulletHandler::GetBullet: значение возвращается не при всех путях выполнения
+D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(270,84): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(270,78): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(270,33): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(272,90): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(272,78): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(272,33): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(280,89): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(280,83): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(280,33): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(282,95): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(282,83): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(282,33): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(497,43): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(502,43): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(512,22): warning C4244: инициализация: преобразование "float" в "int", возможна потеря данных
+D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(526,80): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(526,72): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(526,54): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(526,29): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(586,16): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(679,26): warning C4305: инициализация: усечение из "double" в "float"
+D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(680,34): warning C4838: Преобразование из "int" в "float" требует сужающего преобразования.
+D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(680,34): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
+D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(680,71): warning C4838: Преобразование из "int" в "float" требует сужающего преобразования.
+D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(680,71): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
+D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(702,21): warning C4018: <: несоответствие типов со знаком и без знака
+D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(753,11): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(778,18): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(779,18): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(826,12): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(861,18): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(862,18): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(889,24): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(889,17): warning C4244: инициализация: преобразование "double" в "const float", возможна потеря данных
+D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(927,34): warning C4305: +=: усечение из "double" в "float"
+D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(930,17): warning C4305: *=: усечение из "double" в "float"
+D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(931,17): warning C4305: *=: усечение из "double" в "float"
+D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(982,24): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(982,17): warning C4244: инициализация: преобразование "double" в "const float", возможна потеря данных
+D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(1035,34): warning C4305: +=: усечение из "double" в "float"
+D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(1037,39): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
+D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(1038,41): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
+D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(1041,17): warning C4305: *=: усечение из "double" в "float"
+D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(1042,17): warning C4305: *=: усечение из "double" в "float"
+D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(1092,41): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(1093,42): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(1096,53): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(1097,54): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(1130,11): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
+D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(1131,11): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
+D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(1197,33): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(1197,25): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(1240,12): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
+D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(1254,22): warning C4018: <: несоответствие типов со знаком и без знака
+D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(421,1): warning C4715: BulletHandler::GetBullet: значение возвращается не при всех путях выполнения
   Raylib project 0.vcxproj -> D:\Projects\1.С-C++\7.Raylib\Raylib project 0\x64\Debug\Raylib project 0.exe

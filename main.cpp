@@ -199,6 +199,8 @@ public:
 		hit_timer = 0;
 	}
 
+	virtual void PlayHitAnimation() = 0;
+
 	Type GetType()
 	{
 		return this->type;
@@ -210,11 +212,16 @@ public:
 
 	}
 
+	bool CanGetHurt()
+	{
+		return hit_timer > wait_for;
+	}
+
 	void Hit(float dx, float dy, uint8_t hit_flags)
 	{
 		if (!(hit_flags & (uint8_t)Mob::HitFlags::HITTED_BY_BULLET))
 		{
-			if (hit_timer < wait_for)
+			if (!CanGetHurt())
 				return;
 		}
 		//else
@@ -661,6 +668,11 @@ public:
 		sprite_offset.y = -38 * pixel_scale / 2;
 	}
 
+	void PlayHitAnimation() override
+	{
+		hit_timer = hit_timer_duration;
+	}
+
 	void Update(BulletHandler& bullet_handl)
 	{
 		const float delta_time = GetFrameTime();
@@ -704,9 +716,12 @@ public:
 				//printf("hit flags: [%d]\n", hit_flags);
 				const float bullet_strength = 10;
 				Hit(d.x * bullet_strength, d.y * bullet_strength, hit_flags);
+				PlayHitAnimation();
 				b->IncrimentHitted();
 			}
 		}
+
+		Frame_Update(delta_time);
 #pragma endregion
 
 #ifdef ArrowShooting
@@ -743,15 +758,37 @@ public:
 
 
 #ifdef DrawSprites
-		DrawTextureRec(player_texture, player_rectangle, Vector2{ position.x + sprite_offset.x, position.y + sprite_offset.y }, WHITE);
+		rect_dst.width = player_texture.width * pixel_scale * scale_x;
+		rect_dst.height = player_texture.height * pixel_scale * scale_y;
+		rect_dst.x = position.x;
+		rect_dst.y = position.y;
+		DrawTexturePro(player_texture, { 0,0,(float)player_texture.width, (float)player_texture.height }, rect_dst, { rect_dst.width / 2, rect_dst.height / 2 }, 0.0f, WHITE);
+		//DrawTextureRec(player_texture, player_rectangle, Vector2{ position.x + sprite_offset.x, position.y + sprite_offset.y }, WHITE);
 #endif
 		DrawRing(position, GetRadius(), GetRadius() + 5, 0, 360, 0, Color{0,0,255,100});
 	}
 private:
+	void Frame_Update(const float delta_time)
+	{
+		if (hit_timer > 0)
+			hit_timer -= delta_time;
+		if (hit_timer < 0)
+			hit_timer = 0;
+
+		scale_y = 1.0f - pow(hit_timer / hit_timer_duration, 2) * 0.9f;
+		scale_x = 1.0f + pow(hit_timer / hit_timer_duration, 2) * 0.6f;
+	}
+
 	Vector2 prev_position;
 	float speed;
 	Vector2 sprite_offset;
 	const float bullet_speed = 1750;
+
+
+	float hit_timer;
+	const float hit_timer_duration = 0.4f;
+	Rectangle rect_dst;
+	float scale_x = 1.0f, scale_y = 1.0f;
 };
 
 class Enemy : public Mob
@@ -768,7 +805,7 @@ public:
 		sprite_offset.y = -26 * pixel_scale / 2;
 	}
 
-	void PlayHitAnimation()
+	void PlayHitAnimation() override
 	{
 		hit_timer = hit_timer_duration;
 	}
@@ -799,6 +836,12 @@ protected:
 					hit_flags |= (uint8_t)Mob::HitFlags::HITTED_BY_ENEMY; // setting flag that player got hit by enemy
 			mob.Hit(-norm_delta_x, -norm_delta_y, hit_flags);
 
+			if(CanGetHurt())
+			{
+				mob.PlayHitAnimation();
+				PlayHitAnimation();
+			}
+
 			hit_flags = 0;
 			if (mob.GetType() != GetType())
 				if (mob.GetType() == Mob::Type::Player)
@@ -807,14 +850,24 @@ protected:
 		}
 
 	}
-	void Frame_Update()
+	void Frame_Update(const float delta_time)
+	{
+		if (hit_timer > 0)
+			hit_timer -= delta_time;
+		if (hit_timer < 0)
+			hit_timer = 0;
+
+		scale_y = 1.0f - pow(hit_timer / hit_timer_duration, 2) * 0.9f;
+		scale_x = 1.0f + pow(hit_timer / hit_timer_duration, 2) * 0.6f;
+	}
 
 	float push_strength;
 	Color color;
 	Vector2 sprite_offset;
 
 	float hit_timer;
-	const float hit_timer_duration = 2.0f;
+	const float hit_timer_duration = 0.4f;
+	float scale_x, scale_y;
 };
 
 class Cancer : public Enemy
@@ -847,6 +900,8 @@ public:
 
 			Hit(norm_delta_x * 5, norm_delta_y * 5, hit_flags);
 
+			PlayHitAnimation();
+
 			bullet.IncrimentHitted();
 
 			printf("position of emitter: X=%.02f Y=%.02f\n", position.x, position.y);
@@ -865,6 +920,8 @@ public:
 		const float delta_time = GetFrameTime();
 		float d = 0, delta_x, delta_y;
 		Collision_Update(mob, d, delta_x, delta_y, delta_time);
+
+		Frame_Update(delta_time);
 
 		velocity.y += JRAVITY_STRENGTH * 0.01;
 
@@ -894,11 +951,16 @@ public:
 	void Draw() override
 	{
 #ifdef DrawSprites
-		DrawTextureRec(enemy_cancer_texture, enemy_cancer_rectangle, Vector2{ position.x + sprite_offset.x, position.y + sprite_offset.y }, WHITE);
-#endif
+		enemy_rect_dst.width = enemy_cancer_texture.width * pixel_scale * scale_x;
+		enemy_rect_dst.height = enemy_cancer_texture.height * pixel_scale * scale_y;
+		enemy_rect_dst.x = position.x;
+		enemy_rect_dst.y = position.y;
+		DrawTexturePro(enemy_cancer_texture, { 0,0,(float)enemy_cancer_texture.width, (float)enemy_cancer_texture.height }, enemy_rect_dst, { enemy_rect_dst.width / 2, enemy_rect_dst.height / 2 }, 0.0f, WHITE);
+#endif																																		  
 		DrawRing(position, GetRadius(), GetRadius() + 5, 0, 360, 0, color);
 	}
-
+protected:
+	Rectangle enemy_rect_dst;
 };
 
 class Koronavirus : public Enemy
@@ -929,6 +991,8 @@ public:
 			hit_flags |= (uint8_t)Mob::HitFlags::HITTED_BY_BULLET;
 
 			Hit(norm_delta_x * 5, norm_delta_y * 5, hit_flags);
+
+			PlayHitAnimation();
 
 			bullet.IncrimentHitted();
 
@@ -961,6 +1025,10 @@ public:
 				reload_timer = 0;
 			}
 		}
+
+		Frame_Update(delta_time);
+
+
 		reload_timer += delta_time;
 
 		velocity.y += JRAVITY_STRENGTH * 0.01;
@@ -994,7 +1062,14 @@ public:
 	void Draw() override
 	{
 #ifdef DrawSprites
-		DrawTextureRec(enemy_koronavirus_texture, enemy_cancer_rectangle, Vector2{ position.x + sprite_offset.x, position.y + sprite_offset.y }, WHITE);
+		//DrawTextureRec(enemy_koronavirus_texture, enemy_koronavirus_rectangle, Vector2{ position.x + sprite_offset.x, position.y + sprite_offset.y }, WHITE);
+		enemy_rect_dst.width = enemy_koronavirus_texture.width * pixel_scale * scale_x;
+		enemy_rect_dst.height = enemy_koronavirus_texture.height * pixel_scale * scale_y;
+		enemy_rect_dst.x = position.x;
+		enemy_rect_dst.y = position.y;
+		DrawTexturePro(enemy_koronavirus_texture, { 0,0,(float)enemy_koronavirus_texture.width, (float)enemy_koronavirus_texture.height }, 
+			enemy_rect_dst, { enemy_rect_dst.width / 2, enemy_rect_dst.height / 2 }, 0.0f, WHITE);
+
 #endif
 		DrawRing(position, GetRadius(), GetRadius() + 5, 0, 360, 0, color);
 	}
@@ -1002,6 +1077,7 @@ private:
 	float shooting_period = 4.0f;
 	float reload_timer = 0.0f;
 	float atack_radius = 500;
+	Rectangle enemy_rect_dst;
 };
 
 int main()
@@ -1012,20 +1088,14 @@ int main()
 
 	Player player;
 	player_texture = LoadTexture("player.png");
-	player_texture.width = 38 * pixel_scale;
-	player_texture.height = 38 * pixel_scale;
-	player_rectangle.width = 38 * pixel_scale;
-	player_rectangle.height = 38 * pixel_scale;
+	player_rectangle.width = player_texture.width;
+	player_rectangle.height = player_texture.height;
 
 	enemy_cancer_texture = LoadTexture("enemy.png");
-	enemy_cancer_texture.width = 31 * pixel_scale;
-	enemy_cancer_texture.height = 26 * pixel_scale;
-	enemy_cancer_rectangle.width = 31 * pixel_scale;
-	enemy_cancer_rectangle.height = 26 * pixel_scale;
+	enemy_cancer_rectangle.width = enemy_cancer_texture.width;
+	enemy_cancer_rectangle.height = enemy_cancer_texture.height;
 
 	enemy_koronavirus_texture = LoadTexture("sprites\\enemy_koronavirus.png");
-	enemy_koronavirus_texture.width = 31 * pixel_scale;
-	enemy_koronavirus_texture.height = 26 * pixel_scale;
 	enemy_koronavirus_rectangle.width = 33 * pixel_scale;
 	enemy_koronavirus_rectangle.height = 35 * pixel_scale;
 
@@ -1042,7 +1112,7 @@ int main()
 	{
 		particle_emiter__enemy_cancer_hit.SetParticle(i, particle);
 	}
-	Particle k_particle({ 0,0 }, { 0,0 }, Particle::Texture, 2);
+	Particle k_particle({ 0,0 }, { 0,0 }, Particle::Texture, 1);
 	k_particle.SetScaleChangeFunc1(sqrt);
 	k_particle.AddTexture("sprites\\hit_enemy_kvirus_0.png");
 	k_particle.AddTexture("sprites\\hit_enemy_kvirus_1.png");
@@ -1074,7 +1144,8 @@ int main()
 		//}
 	}
 
-	hit_sound = LoadSound("audio\\hurt.wav");
+	//hit_sound = LoadSound("audio\\hurt.wav");
+	hit_sound = LoadSound("hit.wav");
 	SetSoundVolume(hit_sound, 0.2f);
 
 	cursor_texture = LoadTexture("sprites\\cursor.png");
@@ -1233,7 +1304,6 @@ int main()
 				selector_additional_offset.y = (selector_pos.y - m_pos.y) / SelectorAccuracy;
 				selector_dst_rect.x = selector_pos.x - selector_additional_offset.x;
 				selector_dst_rect.y = selector_pos.y - selector_additional_offset.y;
-				printf("selector offset: x=%.02f y=%.02f\n", selector_additional_offset.x, selector_additional_offset.y);
 				DrawTexturePro(selector_corner_texture, selector_src_rect, selector_dst_rect, { selector_dist_from_center, selector_dist_from_center }, angle, WHITE);
 				DrawTexturePro(selector_corner_texture, selector_src_rect, selector_dst_rect, { selector_dist_from_center, selector_dist_from_center }, angle+90, WHITE);
 				DrawTexturePro(selector_corner_texture, selector_src_rect, selector_dst_rect, { selector_dist_from_center, selector_dist_from_center }, angle+180, WHITE);
