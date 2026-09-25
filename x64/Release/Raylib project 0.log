@@ -1,0 +1,8 @@
+﻿  main.cpp
+D:\Projects\1.С-C++\7.Raylib\Raylib project 0\Raylib project 0\main.cpp(42,26): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  Создание кода
+  1 of 206 functions ( 0.5%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Создание кода завершено
+  Raylib project 0.vcxproj -> D:\Projects\1.С-C++\7.Raylib\Raylib project 0\x64\Release\Raylib project 0.exe
